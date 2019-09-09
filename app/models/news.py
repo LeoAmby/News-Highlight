@@ -3,7 +3,7 @@ class News:
     Defining News Objects
     '''
 
-    def __init__ (self,publishers, countries, Categories):
+    def __init__ (self,publishers, countries, categories):
         self.publisher = publishers
         self.country = country
-        self.categories = Categories
+        self.categories = categories
