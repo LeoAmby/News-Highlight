@@ -1,32 +1,28 @@
 from app import app
 import urllib.request,json
 from .models import news
+from config import Config
+import requests
 
 News = news.News
 
 #api key
-api_key = app.config['NEWS_API_KEY']
+api_key = Config.API_KEY
 
 #Base url
-base_url = app.config['NEWS_API_BASE_URL']
+base_url = Config.NEWS_API_BASE_URL
 
-def get_news(category):
+def get_news():
     '''
     Function that gets the json response to our url request
     '''
 
-    get_news_url = base_url.format(category, api_key)
+    get_news_url = base_url + api_key
 
-    with urllib.request.urlopen(get_news_url) as url:
-        get_news_data = url.read()
-        get_news_response = json.loads(get_news_data)
+    worldNews = requests.get(get_news_url)
+    news = worldNews.json()
 
-        news_results = None
-
-        if get_news_response['results']:
-            news_results_list = get_news_response['results']
-            news_results = process_results(news_results_lists)
-
+print(news)
 
 def process_results(news_list):
         '''
@@ -49,7 +45,7 @@ def process_results(news_list):
                 language = news_item.get('language')
                 country = news_item.get('country')
 
-                
+
 
 
 

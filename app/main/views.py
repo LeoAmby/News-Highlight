@@ -1,4 +1,5 @@
-from .request import get_news
+from app.request import get_news
+from flask import render_template
 
 @app.route('/')
 def index():
@@ -9,6 +10,6 @@ def index():
 
     #Getting news highlights
     
-    news_highlights = get_news('highlights')
+    news_highlights = get_news()
     print(news_highlights)
-    return render_template('index.html', news_highlights )
+    return render_template('index.html', highlights = news_highlights )
