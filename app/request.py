@@ -47,8 +47,9 @@ def process_results(news_list):
                 url = news_item.get('url')
                 category = news_item.get('category')
                 language = news_item.get('language')
-                country = news_item.get('country'
-                )
+                country = news_item.get('country')
+
+                
 
 
 
