@@ -1,14 +1,14 @@
 import os
-from .env import
 class Config:
     '''
     These is the General configuration parent class
     '''
-    #pip install .env
 
 
     API_KEY = os.environ.get('NEWS_API_KEY')
     NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?apiKey='
+    NEWS_ARTICLES_URL = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
 class ProdConfig(Config):
     pass

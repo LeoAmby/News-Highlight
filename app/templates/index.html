@@ -1,8 +1,21 @@
+{% extends 'base.html' %}
 {% block content %}
-<p>
+<div class="container">
+    <div class="row">
+            {% for sources in highlights %}
+    <div class="col-md-3">
+            {{sources.name}} 
+            {{sources.url}}
+        
+        
+        <a href="/articles/{{sources.id}}">to articles</a>
+    </div>
+           
+        {% endfor %}
 
-    jsljkgjks
-</p>
+    </div>
+</div>
+
 
 {% endblock %}
 
