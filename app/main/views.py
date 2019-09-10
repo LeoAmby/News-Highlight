@@ -1,7 +1,8 @@
+from . import main
 from app.request import get_news
 from flask import render_template
 
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
