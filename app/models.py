@@ -14,8 +14,9 @@ class News:
 
 
 class Articles:
-
-
+    '''
+    objects of new articles
+    '''
 
     def __init__(self, author, title, description,image,publishedAt,url):
         self.author = author

@@ -1,7 +1,23 @@
 {% extends 'base.html'%}
 
 {% block content %}
+<div class="container">
+    <div class="row">
 {% for article in articles %}
-<li>{{article.description}}</li>
+<div class="col-md-4">
+        <div class="card">
+                <div class="card-body">
+    <img src="{{article.image}}" class="img-responsive" height="300px" width="300px">
+    <p>{{article.title}}</p>
+    <li>{{article.author}}</li>
+    <li>{{article.publishedAt}}</li>
+    <p>{{article.description}}</p>
+    <a href="{{article.url}}">Read More..</a>
+    <!-- author, title, description,image,publishedAt,url -->
+</div>
+</div>
+</div>
 {% endfor%}
+</div>
+</div>
 {% endblock %}

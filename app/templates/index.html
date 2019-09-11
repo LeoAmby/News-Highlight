@@ -2,17 +2,26 @@
 {% block content %}
 <div class="container">
     <div class="row">
+        
             {% for sources in highlights %}
     <div class="col-md-4">
-            {{sources.name}} 
-            {{sources.url}}
+            <div class="card">
+                    <div class="card-body">
+            
+            <h5 background-color="blue"> {{sources.name}}br
+                    {{sources.country}}
+            </h3>
+            <p>{{sources.description}}</p>
+            <a href="{{sources.url}}" >Read More...</a>
         
         
-        <a href="/articles/{{sources.id}}">View Articles</a>
+        <p><a href="/articles/{{sources.id}}">View Articles</a></p>
+    </div>
+</div>
     </div>
            
         {% endfor %}
-
+    
     </div>
 </div>
 
