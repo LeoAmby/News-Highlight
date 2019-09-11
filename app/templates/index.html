@@ -3,12 +3,12 @@
 <div class="container">
     <div class="row">
             {% for sources in highlights %}
-    <div class="col-md-3">
+    <div class="col-md-4">
             {{sources.name}} 
             {{sources.url}}
         
         
-        <a href="/articles/{{sources.id}}">to articles</a>
+        <a href="/articles/{{sources.id}}">View Articles</a>
     </div>
            
         {% endfor %}

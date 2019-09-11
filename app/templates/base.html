@@ -12,12 +12,12 @@
     {% endif %}
 </head>
 <body>
-
+        {% block navbar %}
+        {% include 'navbar.html' %}
+       {% endblock %}
     <!--Content block-->
     {% block content %}
-        {% block navbar %}
-         {% include 'navbar.html' %}
-        {% endblock %}
+        
     {% endblock %}    
 </body>
 </html>
