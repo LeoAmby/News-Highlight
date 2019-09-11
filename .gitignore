@@ -1,3 +1,4 @@
 virtual/
-*.pyc
+*.pyc#
+.env
 instance/
